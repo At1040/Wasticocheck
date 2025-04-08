@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login - MediCare Pharmacy</title>
+    <link rel="stylesheet" href="../styleCss/style.css">
+    <link rel="stylesheet" href="../styleCss/admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>MediCare</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="prescription.html">Prescription</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="cart.html"><i class="fas fa-shopping-cart"></i> Cart</a></li>
+                <li><a href="user-login.html" class="btn-login">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="admin-main">
+        <div class="admin-container">
+            <div class="admin-form-container">
+                <div class="admin-logo">
+                    <i class="fas fa-user-shield"></i>
+                    <h2>Admin Portal</h2>
+                </div>
+
+                <form class="admin-form">
+                    <div class="form-group">
+                        <label for="admin-username">Username</label>
+                        <div class="input-group">
+                            <i class="fas fa-user"></i>
+                            <input type="text" id="admin-username" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="admin-password">Password</label>
+                        <div class="input-group">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" id="admin-password" required>
+                            <button type="button" class="toggle-password">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="admin-2fa">Two-Factor Authentication</label>
+                        <div class="input-group">
+                            <i class="fas fa-key"></i>
+                            <input type="text" id="admin-2fa" placeholder="Enter 6-digit code" required>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="admin-submit-btn">
+                        <i class="fas fa-sign-in-alt"></i>
+                        Sign In
+                    </button>
+
+                    <div class="security-notice">
+                        <i class="fas fa-shield-alt"></i>
+                        <p>This is a secure admin portal. Unauthorized access is prohibited.</p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>MediCare Pharmacy</h3>
+                <p>Your trusted partner in healthcare</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="prescription.html">Prescription</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <p><i class="fas fa-phone"></i> +1 234 567 890</p>
+                <p><i class="fas fa-envelope"></i> info@medicare.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Health Street, Medical City</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 MediCare Pharmacy. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../script/admin.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Password visibility toggle
+            const togglePassword = document.querySelector('.toggle-password');
+            const passwordInput = document.querySelector('#admin-password');
+            const eyeIcon = togglePassword.querySelector('i');
+
+            togglePassword.addEventListener('click', function() {
+                const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+                passwordInput.setAttribute('type', type);
+                eyeIcon.classList.toggle('fa-eye');
+                eyeIcon.classList.toggle('fa-eye-slash');
+            });
+
+            // Form submission
+            const adminForm = document.querySelector('.admin-form');
+            adminForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+
+                const username = document.getElementById('admin-username').value;
+                const password = document.getElementById('admin-password').value;
+                const twoFactorCode = document.getElementById('admin-2fa').value;
+
+                const result = window.admin.adminLogin(username, password, twoFactorCode);
+
+                if (result.success) {
+                    // Show success message
+                    const successMessage = document.createElement('div');
+                    successMessage.className = 'success-message';
+                    successMessage.textContent = result.message;
+                    adminForm.prepend(successMessage);
+
+                    // Redirect to dashboard after 1.5 seconds
+                    setTimeout(() => {
+                        window.location.href = 'admin-dashboard.html';
+                    }, 1500);
+                } else {
+                    // Show error message
+                    const errorMessage = document.createElement('div');
+                    errorMessage.className = 'error-message';
+                    errorMessage.textContent = result.message;
+                    adminForm.prepend(errorMessage);
+
+                    // Remove message after 3 seconds
+                    setTimeout(() => {
+                        errorMessage.remove();
+                    }, 3000);
+                }
+            });
+        });
+    </script>
+</body>
+</html> 

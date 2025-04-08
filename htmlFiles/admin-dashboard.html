@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - MediCare Pharmacy</title>
+    <link rel="stylesheet" href="../styleCss/style.css">
+    <link rel="stylesheet" href="../styleCss/admin-dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="admin-layout">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>MediCare Admin</h2>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li class="active">
+                        <a href="#">
+                            <i class="fas fa-tachometer-alt"></i>
+                            Dashboard
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-box"></i>
+                            Products
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-file-prescription"></i>
+                            Prescriptions
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-users"></i>
+                            Customers
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-shopping-cart"></i>
+                            Orders
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-chart-bar"></i>
+                            Reports
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-cog"></i>
+                            Settings
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="admin-content">
+            <header class="admin-header">
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search...">
+                </div>
+                <div class="admin-actions">
+                    <button class="notification-btn">
+                        <i class="fas fa-bell"></i>
+                        <span class="notification-badge">3</span>
+                    </button>
+                    <div class="admin-profile">
+                        <img src="../images/admin-avatar.jpg" alt="Admin">
+                        <span>Admin User</span>
+                    </div>
+                </div>
+            </header>
+
+            <div class="dashboard-content">
+                <div class="dashboard-header">
+                    <h1>Dashboard Overview</h1>
+                    <div class="date-filter">
+                        <select>
+                            <option>Today</option>
+                            <option>This Week</option>
+                            <option>This Month</option>
+                            <option>This Year</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>Total Orders</h3>
+                            <p class="stat-number">245</p>
+                            <p class="stat-change positive">+12% from last month</p>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-dollar-sign"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>Revenue</h3>
+                            <p class="stat-number">$12,450</p>
+                            <p class="stat-change positive">+8% from last month</p>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>New Customers</h3>
+                            <p class="stat-number">45</p>
+                            <p class="stat-change positive">+5% from last month</p>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-file-prescription"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>Prescriptions</h3>
+                            <p class="stat-number">78</p>
+                            <p class="stat-change negative">-3% from last month</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dashboard-grid">
+                    <div class="dashboard-card">
+                        <h2>Recent Orders</h2>
+                        <div class="table-responsive">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Order ID</th>
+                                        <th>Customer</th>
+                                        <th>Date</th>
+                                        <th>Amount</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>#ORD-001</td>
+                                        <td>John Doe</td>
+                                        <td>2024-03-15</td>
+                                        <td>$150.00</td>
+                                        <td><span class="status completed">Completed</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>#ORD-002</td>
+                                        <td>Jane Smith</td>
+                                        <td>2024-03-14</td>
+                                        <td>$85.50</td>
+                                        <td><span class="status pending">Pending</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>#ORD-003</td>
+                                        <td>Mike Johnson</td>
+                                        <td>2024-03-14</td>
+                                        <td>$210.75</td>
+                                        <td><span class="status processing">Processing</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="dashboard-card">
+                        <h2>Recent Prescriptions</h2>
+                        <div class="table-responsive">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Prescription ID</th>
+                                        <th>Patient</th>
+                                        <th>Doctor</th>
+                                        <th>Date</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>#PRS-001</td>
+                                        <td>Sarah Wilson</td>
+                                        <td>Dr. Brown</td>
+                                        <td>2024-03-15</td>
+                                        <td><span class="status completed">Approved</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>#PRS-002</td>
+                                        <td>David Lee</td>
+                                        <td>Dr. Smith</td>
+                                        <td>2024-03-14</td>
+                                        <td><span class="status pending">Pending</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>#PRS-003</td>
+                                        <td>Emily Davis</td>
+                                        <td>Dr. Johnson</td>
+                                        <td>2024-03-14</td>
+                                        <td><span class="status processing">Processing</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="../script/admin.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Check if admin is logged in
+            if (!window.admin.isAdminLoggedIn()) {
+                window.location.href = 'admin-login.html';
+                return;
+            }
+
+            // Load dashboard data
+            function loadDashboardData() {
+                // Load statistics
+                const stats = window.admin.loadDashboardStats();
+                document.querySelector('.stat-card:nth-child(1) .stat-number').textContent = stats.totalOrders;
+                document.querySelector('.stat-card:nth-child(2) .stat-number').textContent = `$${stats.revenue.toLocaleString()}`;
+                document.querySelector('.stat-card:nth-child(3) .stat-number').textContent = stats.newCustomers;
+                document.querySelector('.stat-card:nth-child(4) .stat-number').textContent = stats.prescriptions;
+
+                // Update trends
+                document.querySelector('.stat-card:nth-child(1) .stat-change').textContent = `${stats.orderTrend} from last month`;
+                document.querySelector('.stat-card:nth-child(2) .stat-change').textContent = `${stats.revenueTrend} from last month`;
+                document.querySelector('.stat-card:nth-child(3) .stat-change').textContent = `${stats.customerTrend} from last month`;
+                document.querySelector('.stat-card:nth-child(4) .stat-change').textContent = `${stats.prescriptionTrend} from last month`;
+
+                // Load recent orders
+                const orders = window.admin.loadRecentOrders();
+                const ordersTable = document.querySelector('.dashboard-card:first-child table tbody');
+                ordersTable.innerHTML = '';
+                orders.forEach(order => {
+                    const tr = document.createElement('tr');
+                    tr.innerHTML = `
+                        <td>${order.id}</td>
+                        <td>${order.customer}</td>
+                        <td>${order.date}</td>
+                        <td>$${order.amount.toFixed(2)}</td>
+                        <td><span class="status ${order.status}">${order.status.charAt(0).toUpperCase() + order.status.slice(1)}</span></td>
+                    `;
+                    ordersTable.appendChild(tr);
+                });
+
+                // Load recent prescriptions
+                const prescriptions = window.admin.loadRecentPrescriptions();
+                const prescriptionsTable = document.querySelector('.dashboard-card:last-child table tbody');
+                prescriptionsTable.innerHTML = '';
+                prescriptions.forEach(prescription => {
+                    const tr = document.createElement('tr');
+                    tr.innerHTML = `
+                        <td>${prescription.id}</td>
+                        <td>${prescription.patient}</td>
+                        <td>${prescription.doctor}</td>
+                        <td>${prescription.date}</td>
+                        <td><span class="status ${prescription.status}">${prescription.status.charAt(0).toUpperCase() + prescription.status.slice(1)}</span></td>
+                    `;
+                    prescriptionsTable.appendChild(tr);
+                });
+            }
+
+            // Handle search
+            const searchInput = document.querySelector('.search-bar input');
+            searchInput.addEventListener('input', function(e) {
+                const query = e.target.value;
+                const results = window.admin.searchData(query);
+
+                // Update orders table
+                const ordersTable = document.querySelector('.dashboard-card:first-child table tbody');
+                ordersTable.innerHTML = '';
+                results.orders.forEach(order => {
+                    const tr = document.createElement('tr');
+                    tr.innerHTML = `
+                        <td>${order.id}</td>
+                        <td>${order.customer}</td>
+                        <td>${order.date}</td>
+                        <td>$${order.amount.toFixed(2)}</td>
+                        <td><span class="status ${order.status}">${order.status.charAt(0).toUpperCase() + order.status.slice(1)}</span></td>
+                    `;
+                    ordersTable.appendChild(tr);
+                });
+
+                // Update prescriptions table
+                const prescriptionsTable = document.querySelector('.dashboard-card:last-child table tbody');
+                prescriptionsTable.innerHTML = '';
+                results.prescriptions.forEach(prescription => {
+                    const tr = document.createElement('tr');
+                    tr.innerHTML = `
+                        <td>${prescription.id}</td>
+                        <td>${prescription.patient}</td>
+                        <td>${prescription.doctor}</td>
+                        <td>${prescription.date}</td>
+                        <td><span class="status ${prescription.status}">${prescription.status.charAt(0).toUpperCase() + prescription.status.slice(1)}</span></td>
+                    `;
+                    prescriptionsTable.appendChild(tr);
+                });
+            });
+
+            // Handle date filter
+            const dateFilter = document.querySelector('.date-filter select');
+            dateFilter.addEventListener('change', function() {
+                const dateRange = this.value;
+                const filteredData = window.admin.filterDataByDate(dateRange);
+                loadDashboardData();
+            });
+
+            // Handle sidebar navigation
+            const navItems = document.querySelectorAll('.sidebar-nav li');
+            navItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    navItems.forEach(nav => nav.classList.remove('active'));
+                    this.classList.add('active');
+                });
+            });
+
+            // Initial load
+            loadDashboardData();
+        });
+    </script>
+</body>
+</html> 

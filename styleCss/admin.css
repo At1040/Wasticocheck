@@ -1,0 +1,124 @@
+.admin-main {
+    padding: 100px 5% 50px;
+    background-color: #f5f5f5;
+    min-height: calc(100vh - 200px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.admin-container {
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.admin-form-container {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    padding: 2rem;
+}
+
+.admin-logo {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.admin-logo i {
+    font-size: 3rem;
+    color: #2c7be5;
+    margin-bottom: 1rem;
+}
+
+.admin-logo h2 {
+    color: #333;
+    font-size: 1.5rem;
+}
+
+.admin-form .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.admin-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #333;
+    font-weight: 500;
+}
+
+.input-group {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-group i {
+    position: absolute;
+    left: 1rem;
+    color: #666;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 0.8rem 1rem 0.8rem 3rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 1rem;
+    background: none;
+    border: none;
+    color: #666;
+    cursor: pointer;
+}
+
+.admin-submit-btn {
+    width: 100%;
+    padding: 1rem;
+    background-color: #2c7be5;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.admin-submit-btn:hover {
+    background-color: #1a5cb0;
+}
+
+.security-notice {
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.security-notice i {
+    color: #2c7be5;
+    font-size: 1.2rem;
+}
+
+.security-notice p {
+    color: #666;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .admin-container {
+        padding: 0 1rem;
+    }
+} 

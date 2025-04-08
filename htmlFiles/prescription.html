@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prescription - MediCare Pharmacy</title>
+    <link rel="stylesheet" href="../styleCss/style.css">
+    <link rel="stylesheet" href="../styleCss/prescription.css">
+    <link rel="stylesheet" href="../styleCss/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>MediCare</h1>
+            </div>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="prescription.html" class="active">Prescription</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="cart.html"><i class="fas fa-shopping-cart"></i> Cart</a></li>
+                <li><a href="user-login.html" class="btn-login">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="prescription-main">
+        <h1>Upload Your Prescription</h1>
+        
+        <div class="prescription-container">
+            <div class="prescription-info">
+                <h2>How to Upload Your Prescription</h2>
+                <ol>
+                    <li>Take a clear photo of your prescription</li>
+                    <li>Make sure all details are visible</li>
+                    <li>Upload the image using the form below</li>
+                    <li>Fill in your contact details</li>
+                    <li>Submit and wait for our confirmation</li>
+                </ol>
+                <div class="info-box">
+                    <i class="fas fa-info-circle"></i>
+                    <p>We'll process your prescription within 24 hours and contact you for confirmation.</p>
+                </div>
+            </div>
+
+            <form class="prescription-form">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="prescription">Upload Prescription</label>
+                    <div class="upload-box">
+                        <input type="file" id="prescription" accept="image/*" required>
+                        <div class="upload-placeholder">
+                            <i class="fas fa-cloud-upload-alt"></i>
+                            <p>Click to upload or drag and drop</p>
+                            <p class="upload-hint">JPG, PNG or PDF (max. 5MB)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="notes">Additional Notes</label>
+                    <textarea id="notes" rows="4"></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Submit Prescription</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>MediCare Pharmacy</h3>
+                <p>Your trusted partner in healthcare</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="prescription.html">Prescription</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <p><i class="fas fa-phone"></i> +1 234 567 890</p>
+                <p><i class="fas fa-envelope"></i> info@medicare.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Health Street, Medical City</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 MediCare Pharmacy. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="../script/prescription.js"></script>
+    <script src="../script/hamburger-menu.js"></script>
+</body>
+</html> 
