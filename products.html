@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - MediCare Pharmacy</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .product-info {
+            padding: 1rem;
+        }
+
+        .product-title {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: #2c3e50;
+        }
+
+        .product-price {
+            font-size: 1.1rem;
+            color: #e74c3c;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .add-to-cart {
+            display: block;
+            width: 100%;
+            padding: 0.8rem;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .add-to-cart:hover {
+            background-color: #2980b9;
+        }
+
+        .page-title {
+            text-align: center;
+            padding: 2rem;
+            background-color: #f9f9f9;
+            margin-top: 60px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>MediCare</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html" class="active">Products</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="prescription.html">Prescription</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li>
+                    <a href="cart.html" class="cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <div class="page-title">
+        <h2>Our Products</h2>
+        <p>Quality healthcare products for your well-being</p>
+    </div>
+
+    <div class="products-grid">
+        <div class="product-card">
+            <img src="images/paracetamol.jpg" alt="Paracetamol" class="product-image">
+            <div class="product-info">
+                <h3 class="product-title">Paracetamol 500mg</h3>
+                <p class="product-price">$5.99</p>
+                <button class="add-to-cart" data-id="1" data-name="Paracetamol 500mg" data-price="5.99" data-image="images/paracetamol.jpg">
+                    Add to Cart
+                </button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="images/vitamin-c.jpg" alt="Vitamin C" class="product-image">
+            <div class="product-info">
+                <h3 class="product-title">Vitamin C 1000mg</h3>
+                <p class="product-price">$12.99</p>
+                <button class="add-to-cart" data-id="2" data-name="Vitamin C 1000mg" data-price="12.99" data-image="images/vitamin-c.jpg">
+                    Add to Cart
+                </button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="images/omega-3.jpg" alt="Omega-3" class="product-image">
+            <div class="product-info">
+                <h3 class="product-title">Omega-3 Fish Oil</h3>
+                <p class="product-price">$15.99</p>
+                <button class="add-to-cart" data-id="3" data-name="Omega-3 Fish Oil" data-price="15.99" data-image="images/omega-3.jpg">
+                    Add to Cart
+                </button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="images/multivitamin.jpg" alt="Multivitamin" class="product-image">
+            <div class="product-info">
+                <h3 class="product-title">Daily Multivitamin</h3>
+                <p class="product-price">$18.99</p>
+                <button class="add-to-cart" data-id="4" data-name="Daily Multivitamin" data-price="18.99" data-image="images/multivitamin.jpg">
+                    Add to Cart
+                </button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="images/probiotic.jpg" alt="Probiotic" class="product-image">
+            <div class="product-info">
+                <h3 class="product-title">Probiotic Supplement</h3>
+                <p class="product-price">$22.99</p>
+                <button class="add-to-cart" data-id="5" data-name="Probiotic Supplement" data-price="22.99" data-image="images/probiotic.jpg">
+                    Add to Cart
+                </button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="images/calcium.jpg" alt="Calcium" class="product-image">
+            <div class="product-info">
+                <h3 class="product-title">Calcium + Vitamin D</h3>
+                <p class="product-price">$14.99</p>
+                <button class="add-to-cart" data-id="6" data-name="Calcium + Vitamin D" data-price="14.99" data-image="images/calcium.jpg">
+                    Add to Cart
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: info@medicare.com</p>
+                <p>Phone: (123) 456-7890</p>
+            </div>
+            <div class="footer-section">
+                <h3>Opening Hours</h3>
+                <p>Monday - Friday: 9am - 8pm</p>
+                <p>Saturday - Sunday: 10am - 6pm</p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 MediCare Pharmacy. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html> 

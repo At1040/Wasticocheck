@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - MediCare Pharmacy</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .services-section {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            color: #3498db;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-title {
+            font-size: 1.5rem;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+
+        .service-description {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .page-title {
+            text-align: center;
+            padding: 2rem;
+            background-color: #f9f9f9;
+            margin-top: 60px;
+        }
+
+        .service-highlight {
+            background-color: #f8f9fa;
+            padding: 1rem;
+            border-radius: 5px;
+            margin-top: 1rem;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>MediCare</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="services.html" class="active">Services</a></li>
+                <li><a href="prescription.html">Prescription</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li>
+                    <a href="cart.html" class="cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <div class="page-title">
+        <h2>Our Services</h2>
+        <p>Comprehensive healthcare services for your needs</p>
+    </div>
+
+    <div class="services-section">
+        <div class="services-grid">
+            <div class="service-card">
+                <i class="fas fa-prescription-bottle service-icon"></i>
+                <h3 class="service-title">Prescription Services</h3>
+                <p class="service-description">
+                    Professional prescription filling and medication management services. Our pharmacists are available to answer your questions and provide guidance.
+                </p>
+                <div class="service-highlight">
+                    Free medication review with every prescription
+                </div>
+            </div>
+
+            <div class="service-card">
+                <i class="fas fa-truck service-icon"></i>
+                <h3 class="service-title">Home Delivery</h3>
+                <p class="service-description">
+                    Convenient home delivery service for your medications and healthcare products. Fast and reliable delivery to your doorstep.
+                </p>
+                <div class="service-highlight">
+                    Free delivery for orders over $50
+                </div>
+            </div>
+
+            <div class="service-card">
+                <i class="fas fa-user-md service-icon"></i>
+                <h3 class="service-title">Health Consultation</h3>
+                <p class="service-description">
+                    Professional health consultations with our experienced pharmacists. Get advice on medications, supplements, and general health concerns.
+                </p>
+                <div class="service-highlight">
+                    Book a free consultation today
+                </div>
+            </div>
+
+            <div class="service-card">
+                <i class="fas fa-heartbeat service-icon"></i>
+                <h3 class="service-title">Health Screening</h3>
+                <p class="service-description">
+                    Regular health screening services including blood pressure, cholesterol, and diabetes checks. Stay informed about your health status.
+                </p>
+                <div class="service-highlight">
+                    Free basic health screening every month
+                </div>
+            </div>
+
+            <div class="service-card">
+                <i class="fas fa-pills service-icon"></i>
+                <h3 class="service-title">Medication Management</h3>
+                <p class="service-description">
+                    Personalized medication management services to help you organize and track your medications effectively.
+                </p>
+                <div class="service-highlight">
+                    Free medication schedule planner
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: info@medicare.com</p>
+                <p>Phone: (123) 456-7890</p>
+            </div>
+            <div class="footer-section">
+                <h3>Opening Hours</h3>
+                <p>Monday - Friday: 9am - 8pm</p>
+                <p>Saturday - Sunday: 10am - 6pm</p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 MediCare Pharmacy. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html> 
